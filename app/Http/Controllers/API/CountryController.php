@@ -9,9 +9,25 @@ use Illuminate\Http\Request;
 class CountryController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\JsonResponse
+     * @OA\Get(
+     * path="/api/countries",
+     * summary="Get All Country",
+     * description="Get Country List",
+     * operationId="GetCountryList",
+     * tags={"CountryList"},
+     * security={ {"bearer": {} }},
+     * @OA\Parameter(
+     *    description="All Country",
+     *    in="path",
+     *    name="",
+     *    required=false,
+     *    example="1",
+     *    @OA\Schema(
+     *       type="integer",
+     *       format="int64"
+     *    )
+     * )
+     * )
      */
     public function index(): \Illuminate\Http\JsonResponse
     {
@@ -25,12 +41,44 @@ class CountryController extends Controller
 
 
     /**
-     * Store a newly created resource in storage.
+     * @OA\Post(
+     * path="/api/countries",
+     * operationId="Country",
+     * tags={"Country"},
+     * summary="Country",
+     * description="Country create",
+     *     @OA\RequestBody(
+     *         @OA\JsonContent(),
+     *         @OA\MediaType(
+     *            mediaType="multipart/form-data",
+     *            @OA\Schema(
+     *               type="object",
+     *               required={"title"},
+     *               @OA\Property(property="title", type="text"),
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\JsonResponse
+     *            ),
+     *        ),
+     *    ),
+     *      @OA\Response(
+     *          response=201,
+     *          description="Country create Successfully",
+     *          @OA\JsonContent()
+     *       ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Country create Successfully",
+     *          @OA\JsonContent()
+     *       ),
+     *      @OA\Response(
+     *          response=422,
+     *          description="Unprocessable Entity",
+     *          @OA\JsonContent()
+     *       ),
+     *      @OA\Response(response=400, description="Bad request"),
+     *      @OA\Response(response=404, description="Resource Not Found"),
+     * )
      */
-    public function store(Request $request)
+    public function store(Request $request): \Illuminate\Http\JsonResponse
     {
         $lang = [];
         $input = $request->all();
@@ -48,15 +96,30 @@ class CountryController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
+     * @OA\Get(
+     * path="/api/countries",
+     * summary="Get All Country",
+     * description="Get Country List",
+     * operationId="GetCountryList",
+     * tags={"CountryList"},
+     * security={ {"bearer": {} }},
+     * @OA\Parameter(
+     *    description="All Country",
+     *    in="path",
+     *    name="countryId",
+     *    required=true,
+     *    example="1",
+     *    @OA\Schema(
+     *       type="integer",
+     *       format="int64"
+     *    )
+     * )
+     * )
      */
-    public function show(Country $country): \Illuminate\Http\JsonResponse
+    public function show(Country $country)
     {
         if (is_null($country)) {
-            return $this->sendError('City not found.');
+            return $this->sendError('Country not found.');
         }
         return response()->json([
             "success" => true,
