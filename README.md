@@ -5,3 +5,4 @@
 - php artisan db:seed (Have 3 type languages kaz rus and eng)
 - php artisan serve
 - php artisan l5-swagger:generate (url: http://localhost/api/documentation)
+- Dictionary Postman Collection
