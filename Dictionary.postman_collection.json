@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "2aa5f2ed-79bd-4852-8456-13785ca3ab02",
+		"name": "Dictionary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14902184"
+	},
+	"item": [
+		{
+			"name": "City crud",
+			"item": [
+				{
+					"name": "Cities",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmJlYTE0YWZmOTZhMTU5MmRiM2FlOTRhZWZhMDA1NjczNmU1MzM1NjA4YjY0YjhhNDI0OWNiNzZhODRkYzYxYTMxNjZmNDI5MDVkZDNhM2EiLCJpYXQiOjE2NTk4OTc4MDEuNTkwMjksIm5iZiI6MTY1OTg5NzgwMS41OTAyOTgsImV4cCI6MTY5MTQzMzgwMS41ODcwMjEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.DMuem2bpSePBY3j7SQ9v3flqt-srhPachIj8MBlOuwsJEGHu9U28shUeZsL7TVw1kLE-qehhBYseDyUItjlb8kxv9lHpDHy-QHeIudfs2qc002MjgkAVPltPPae-jJozEgd_leg_R8DL1EH9e9GdEEbnwQ14vy9EkaAKX6fVZEVOGes0XEZa_CPiiFh96Kzer2AEv98EbOo1X6zp05x1tw-Kcgk8jy5KyuepnEgOW7gF-028mFfDyJ9SDNuAgChTqGBoD-qWmWWv8A8b6iUT6GrKCx68s4YgiPFW8nfdyhIfXK6Fa-YbFcW8hp9kMQDNuQc-hpIrj9PoYHJVxkg6t5X9V0CQarkiw1Eyb2bgEn2MjPQmw8PWysloQcSipjTVHskpW_LjIyPIW2MtiMN8BBrfUnU5VUrHFJL_RAKO8k0p4vjLebI-F78S3emf0a3apvRT0kzCOO32ki_K8OUF-cAayUJkQnDzJbgCaKpuLHB0LbVkxhiHqdhIjnVbioadpkeqmOnxU48I-X89KHZ82YVt-alhNzdWA6CxMc7wpO91E2tNS717pjRSN7bENiooVg3Lq8xDKEsBKV6ZgmJYfcNKK1Xbf90axHEw8GLPrQSXJZG3WipSqbazmXZC7u2DdsVHSCjPfGFIKtmiCDPEcmjPtrtmv3VDXs2xim83nx8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create city",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmJlYTE0YWZmOTZhMTU5MmRiM2FlOTRhZWZhMDA1NjczNmU1MzM1NjA4YjY0YjhhNDI0OWNiNzZhODRkYzYxYTMxNjZmNDI5MDVkZDNhM2EiLCJpYXQiOjE2NTk4OTc4MDEuNTkwMjksIm5iZiI6MTY1OTg5NzgwMS41OTAyOTgsImV4cCI6MTY5MTQzMzgwMS41ODcwMjEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.DMuem2bpSePBY3j7SQ9v3flqt-srhPachIj8MBlOuwsJEGHu9U28shUeZsL7TVw1kLE-qehhBYseDyUItjlb8kxv9lHpDHy-QHeIudfs2qc002MjgkAVPltPPae-jJozEgd_leg_R8DL1EH9e9GdEEbnwQ14vy9EkaAKX6fVZEVOGes0XEZa_CPiiFh96Kzer2AEv98EbOo1X6zp05x1tw-Kcgk8jy5KyuepnEgOW7gF-028mFfDyJ9SDNuAgChTqGBoD-qWmWWv8A8b6iUT6GrKCx68s4YgiPFW8nfdyhIfXK6Fa-YbFcW8hp9kMQDNuQc-hpIrj9PoYHJVxkg6t5X9V0CQarkiw1Eyb2bgEn2MjPQmw8PWysloQcSipjTVHskpW_LjIyPIW2MtiMN8BBrfUnU5VUrHFJL_RAKO8k0p4vjLebI-F78S3emf0a3apvRT0kzCOO32ki_K8OUF-cAayUJkQnDzJbgCaKpuLHB0LbVkxhiHqdhIjnVbioadpkeqmOnxU48I-X89KHZ82YVt-alhNzdWA6CxMc7wpO91E2tNS717pjRSN7bENiooVg3Lq8xDKEsBKV6ZgmJYfcNKK1Xbf90axHEw8GLPrQSXJZG3WipSqbazmXZC7u2DdsVHSCjPfGFIKtmiCDPEcmjPtrtmv3VDXs2xim83nx8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Shymkent",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "lang",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "City update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get city by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmJlYTE0YWZmOTZhMTU5MmRiM2FlOTRhZWZhMDA1NjczNmU1MzM1NjA4YjY0YjhhNDI0OWNiNzZhODRkYzYxYTMxNjZmNDI5MDVkZDNhM2EiLCJpYXQiOjE2NTk4OTc4MDEuNTkwMjksIm5iZiI6MTY1OTg5NzgwMS41OTAyOTgsImV4cCI6MTY5MTQzMzgwMS41ODcwMjEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.DMuem2bpSePBY3j7SQ9v3flqt-srhPachIj8MBlOuwsJEGHu9U28shUeZsL7TVw1kLE-qehhBYseDyUItjlb8kxv9lHpDHy-QHeIudfs2qc002MjgkAVPltPPae-jJozEgd_leg_R8DL1EH9e9GdEEbnwQ14vy9EkaAKX6fVZEVOGes0XEZa_CPiiFh96Kzer2AEv98EbOo1X6zp05x1tw-Kcgk8jy5KyuepnEgOW7gF-028mFfDyJ9SDNuAgChTqGBoD-qWmWWv8A8b6iUT6GrKCx68s4YgiPFW8nfdyhIfXK6Fa-YbFcW8hp9kMQDNuQc-hpIrj9PoYHJVxkg6t5X9V0CQarkiw1Eyb2bgEn2MjPQmw8PWysloQcSipjTVHskpW_LjIyPIW2MtiMN8BBrfUnU5VUrHFJL_RAKO8k0p4vjLebI-F78S3emf0a3apvRT0kzCOO32ki_K8OUF-cAayUJkQnDzJbgCaKpuLHB0LbVkxhiHqdhIjnVbioadpkeqmOnxU48I-X89KHZ82YVt-alhNzdWA6CxMc7wpO91E2tNS717pjRSN7bENiooVg3Lq8xDKEsBKV6ZgmJYfcNKK1Xbf90axHEw8GLPrQSXJZG3WipSqbazmXZC7u2DdsVHSCjPfGFIKtmiCDPEcmjPtrtmv3VDXs2xim83nx8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmJlYTE0YWZmOTZhMTU5MmRiM2FlOTRhZWZhMDA1NjczNmU1MzM1NjA4YjY0YjhhNDI0OWNiNzZhODRkYzYxYTMxNjZmNDI5MDVkZDNhM2EiLCJpYXQiOjE2NTk4OTc4MDEuNTkwMjksIm5iZiI6MTY1OTg5NzgwMS41OTAyOTgsImV4cCI6MTY5MTQzMzgwMS41ODcwMjEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.DMuem2bpSePBY3j7SQ9v3flqt-srhPachIj8MBlOuwsJEGHu9U28shUeZsL7TVw1kLE-qehhBYseDyUItjlb8kxv9lHpDHy-QHeIudfs2qc002MjgkAVPltPPae-jJozEgd_leg_R8DL1EH9e9GdEEbnwQ14vy9EkaAKX6fVZEVOGes0XEZa_CPiiFh96Kzer2AEv98EbOo1X6zp05x1tw-Kcgk8jy5KyuepnEgOW7gF-028mFfDyJ9SDNuAgChTqGBoD-qWmWWv8A8b6iUT6GrKCx68s4YgiPFW8nfdyhIfXK6Fa-YbFcW8hp9kMQDNuQc-hpIrj9PoYHJVxkg6t5X9V0CQarkiw1Eyb2bgEn2MjPQmw8PWysloQcSipjTVHskpW_LjIyPIW2MtiMN8BBrfUnU5VUrHFJL_RAKO8k0p4vjLebI-F78S3emf0a3apvRT0kzCOO32ki_K8OUF-cAayUJkQnDzJbgCaKpuLHB0LbVkxhiHqdhIjnVbioadpkeqmOnxU48I-X89KHZ82YVt-alhNzdWA6CxMc7wpO91E2tNS717pjRSN7bENiooVg3Lq8xDKEsBKV6ZgmJYfcNKK1Xbf90axHEw8GLPrQSXJZG3WipSqbazmXZC7u2DdsVHSCjPfGFIKtmiCDPEcmjPtrtmv3VDXs2xim83nx8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Astana",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "lang",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities/18",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete city",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmJlYTE0YWZmOTZhMTU5MmRiM2FlOTRhZWZhMDA1NjczNmU1MzM1NjA4YjY0YjhhNDI0OWNiNzZhODRkYzYxYTMxNjZmNDI5MDVkZDNhM2EiLCJpYXQiOjE2NTk4OTc4MDEuNTkwMjksIm5iZiI6MTY1OTg5NzgwMS41OTAyOTgsImV4cCI6MTY5MTQzMzgwMS41ODcwMjEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.DMuem2bpSePBY3j7SQ9v3flqt-srhPachIj8MBlOuwsJEGHu9U28shUeZsL7TVw1kLE-qehhBYseDyUItjlb8kxv9lHpDHy-QHeIudfs2qc002MjgkAVPltPPae-jJozEgd_leg_R8DL1EH9e9GdEEbnwQ14vy9EkaAKX6fVZEVOGes0XEZa_CPiiFh96Kzer2AEv98EbOo1X6zp05x1tw-Kcgk8jy5KyuepnEgOW7gF-028mFfDyJ9SDNuAgChTqGBoD-qWmWWv8A8b6iUT6GrKCx68s4YgiPFW8nfdyhIfXK6Fa-YbFcW8hp9kMQDNuQc-hpIrj9PoYHJVxkg6t5X9V0CQarkiw1Eyb2bgEn2MjPQmw8PWysloQcSipjTVHskpW_LjIyPIW2MtiMN8BBrfUnU5VUrHFJL_RAKO8k0p4vjLebI-F78S3emf0a3apvRT0kzCOO32ki_K8OUF-cAayUJkQnDzJbgCaKpuLHB0LbVkxhiHqdhIjnVbioadpkeqmOnxU48I-X89KHZ82YVt-alhNzdWA6CxMc7wpO91E2tNS717pjRSN7bENiooVg3Lq8xDKEsBKV6ZgmJYfcNKK1Xbf90axHEw8GLPrQSXJZG3WipSqbazmXZC7u2DdsVHSCjPfGFIKtmiCDPEcmjPtrtmv3VDXs2xim83nx8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities/18",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities",
+								"18"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Country crud",
+			"item": [
+				{
+					"name": "Country List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmJlYTE0YWZmOTZhMTU5MmRiM2FlOTRhZWZhMDA1NjczNmU1MzM1NjA4YjY0YjhhNDI0OWNiNzZhODRkYzYxYTMxNjZmNDI5MDVkZDNhM2EiLCJpYXQiOjE2NTk4OTc4MDEuNTkwMjksIm5iZiI6MTY1OTg5NzgwMS41OTAyOTgsImV4cCI6MTY5MTQzMzgwMS41ODcwMjEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.DMuem2bpSePBY3j7SQ9v3flqt-srhPachIj8MBlOuwsJEGHu9U28shUeZsL7TVw1kLE-qehhBYseDyUItjlb8kxv9lHpDHy-QHeIudfs2qc002MjgkAVPltPPae-jJozEgd_leg_R8DL1EH9e9GdEEbnwQ14vy9EkaAKX6fVZEVOGes0XEZa_CPiiFh96Kzer2AEv98EbOo1X6zp05x1tw-Kcgk8jy5KyuepnEgOW7gF-028mFfDyJ9SDNuAgChTqGBoD-qWmWWv8A8b6iUT6GrKCx68s4YgiPFW8nfdyhIfXK6Fa-YbFcW8hp9kMQDNuQc-hpIrj9PoYHJVxkg6t5X9V0CQarkiw1Eyb2bgEn2MjPQmw8PWysloQcSipjTVHskpW_LjIyPIW2MtiMN8BBrfUnU5VUrHFJL_RAKO8k0p4vjLebI-F78S3emf0a3apvRT0kzCOO32ki_K8OUF-cAayUJkQnDzJbgCaKpuLHB0LbVkxhiHqdhIjnVbioadpkeqmOnxU48I-X89KHZ82YVt-alhNzdWA6CxMc7wpO91E2tNS717pjRSN7bENiooVg3Lq8xDKEsBKV6ZgmJYfcNKK1Xbf90axHEw8GLPrQSXJZG3WipSqbazmXZC7u2DdsVHSCjPfGFIKtmiCDPEcmjPtrtmv3VDXs2xim83nx8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/countries",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Country Create",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Azamat",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "segizseri@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "segizseri@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserInfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmJlYTE0YWZmOTZhMTU5MmRiM2FlOTRhZWZhMDA1NjczNmU1MzM1NjA4YjY0YjhhNDI0OWNiNzZhODRkYzYxYTMxNjZmNDI5MDVkZDNhM2EiLCJpYXQiOjE2NTk4OTc4MDEuNTkwMjksIm5iZiI6MTY1OTg5NzgwMS41OTAyOTgsImV4cCI6MTY5MTQzMzgwMS41ODcwMjEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.DMuem2bpSePBY3j7SQ9v3flqt-srhPachIj8MBlOuwsJEGHu9U28shUeZsL7TVw1kLE-qehhBYseDyUItjlb8kxv9lHpDHy-QHeIudfs2qc002MjgkAVPltPPae-jJozEgd_leg_R8DL1EH9e9GdEEbnwQ14vy9EkaAKX6fVZEVOGes0XEZa_CPiiFh96Kzer2AEv98EbOo1X6zp05x1tw-Kcgk8jy5KyuepnEgOW7gF-028mFfDyJ9SDNuAgChTqGBoD-qWmWWv8A8b6iUT6GrKCx68s4YgiPFW8nfdyhIfXK6Fa-YbFcW8hp9kMQDNuQc-hpIrj9PoYHJVxkg6t5X9V0CQarkiw1Eyb2bgEn2MjPQmw8PWysloQcSipjTVHskpW_LjIyPIW2MtiMN8BBrfUnU5VUrHFJL_RAKO8k0p4vjLebI-F78S3emf0a3apvRT0kzCOO32ki_K8OUF-cAayUJkQnDzJbgCaKpuLHB0LbVkxhiHqdhIjnVbioadpkeqmOnxU48I-X89KHZ82YVt-alhNzdWA6CxMc7wpO91E2tNS717pjRSN7bENiooVg3Lq8xDKEsBKV6ZgmJYfcNKK1Xbf90axHEw8GLPrQSXJZG3WipSqbazmXZC7u2DdsVHSCjPfGFIKtmiCDPEcmjPtrtmv3VDXs2xim83nx8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
